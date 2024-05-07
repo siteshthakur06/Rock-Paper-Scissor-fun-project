@@ -6,6 +6,22 @@ let score = JSON.parse(localStorage.getItem('score')) || {
 
 updatescore();
 
+let isautoPlaying= false;
+let intervalid;
+function autoPlay(){
+    if(!isautoPlaying){
+        intervalid= setInterval(function(){
+            const playermove= pickComp();
+            play(playermove);
+        }, 1000);
+        isautoPlaying= true;
+    }
+    else{
+        clearInterval(intervalid);
+        isautoPlaying= false;
+    }
+}
+
 
 function play(playerMove) {
     const comp = pickComp();
@@ -63,9 +79,9 @@ function play(playerMove) {
     document.querySelector('.js-result').innerHTML = result;
 
     document.querySelector('.js-move').innerHTML = ` You: 
-        <img src="${playerMove}.jpg" class="allimgs" alt="">
+        <img src="images/${playerMove}.jpg" class="allimgs" alt="">
         Computer:
-        <img src="${comp}.jpg" class="allimgs" alt="">`;
+        <img src="images/${comp}.jpg" class="allimgs" alt="">`;
 
 }
 
