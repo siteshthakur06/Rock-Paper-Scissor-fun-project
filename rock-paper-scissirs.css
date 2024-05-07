@@ -32,7 +32,8 @@ body {
     margin-top: 40px;
 }
 
-.reset-scr-btn {
+.reset-scr-btn,
+.auto-play-btn {
     background-color: white;
     border: none;
     font-size: 15px;
