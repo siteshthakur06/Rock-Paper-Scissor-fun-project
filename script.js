@@ -79,9 +79,9 @@ function play(playerMove) {
     document.querySelector('.js-result').innerHTML = result;
 
     document.querySelector('.js-move').innerHTML = ` You: 
-        <img src="images/${playerMove}.jpg" class="allimgs" alt="">
+        <img src="${playerMove}.jpg" class="allimgs" alt="">
         Computer:
-        <img src="images/${comp}.jpg" class="allimgs" alt="">`;
+        <img src="${comp}.jpg" class="allimgs" alt="">`;
 
 }
 
